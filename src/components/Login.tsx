@@ -18,14 +18,9 @@ import { useFirebase } from "../hooks/useFirebase";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const { loading, email, setEmail, password, setPassword, handleLogin, user } =
+  const { loading, email, setEmail, password, setPassword, handleLogin } =
     useFirebase();
   const navigate = useNavigate();
-  if (user) {
-    setTimeout(() => {
-      navigate("/"), 500;
-    });
-  }
 
   return (
     <>
